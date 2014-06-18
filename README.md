@@ -3,8 +3,23 @@ PHP-JS-Titanium-Push-Bridge
 
 Phalcon PHP RPC for titanium push with javascript client library
 
+SERVER SECTION
+==============
 
-You can send push or Via HTTP Post Form
+The index.php
+is the RPC For calling the appcelerator CLOUD Api
+for install it PHALCON PHP Framewrok is required
+
+[Phalcon PHP Framework](http://phalconphp.com/)
+
+
+***
+
+CLIENT SECTION
+==============
+
+
+You can send push  Via HTTP Post Form
 
 ~~~
 <!-- Demo Form Submit -->
