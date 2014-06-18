@@ -12,11 +12,29 @@ for install it PHALCON PHP Framewrok is required
 
 [Phalcon PHP Framework](http://phalconphp.com/)
 
+Available Post Params with default values if not provided:
+
+
+~~~
+$request->getPost("app")  ?: NULL;
+$request->getPost("useracs")  ?: 'admin';
+$request->getPost("passacs")  ?: 'password';
+$request->getPost("toids")  ?:'everyone';
+$request->getPost("channel")  ?:'notify';
+$request->getPost("messaggio") ?: NULL;
+$request->getPost("titolo")   ?: 'Notifica';
+$request->getPost('vibrate') ?: true;
+$request->getPost('badge') ?: null;
+$request->getPost('sound') ?: false;
+~~~
+
+
 
 ***
 
 CLIENT SECTION
 ==============
+
 
 
 You can send push  Via HTTP Post Form
@@ -32,6 +50,12 @@ You can send push  Via HTTP Post Form
 
 
 or with JS CALL
+
+You MUST Provide the you Server RPC Url in the file scsoftPush.hs
+
+~~~
+ var serverURL = "http://WWW.YOURSERVERURL.IT/ajax/send";
+~~~
 
 ~~~
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
