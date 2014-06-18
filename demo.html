@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Client Demo</title>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="scsoftPush.js"></script>
+</head>
+<body>
+
+<!-- Demo Form Submit -->
+<form action="http://WWW.YOUR.SERVER.IT/push/send" method="post">
+<input type="text" value="YOUR_APP_API_KEY" name="app"/><br>
+<textarea rows="4" name="messaggio" cols="20"></textarea>
+<input type="submit" value="Invia">
+</form>
+
+<script type="text/javascript">
+//DEMO JS SUBMIT
+scsoftPush.appKey = 'YOUR_APP_API_KEY';
+scsoftPush.onResult = function(res){
+	if(res.result){
+		alert('push inviata');
+	}else{
+		alert('errore invio push');
+	}
+};
+scsoftPush.send('Test');
+</script>
+</body>
+</html>
